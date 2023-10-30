@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+/* loader */
+.loader {
+  display: block;
+  position: relative;
+  height: 32px;
+  width: 120px;
+  border-bottom: 5px solid #fff;
+  box-sizing: border-box;
+  animation: balancing 2s linear infinite alternate;
+  transform-origin: 50% 100%;
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ff3d00;
+  animation: ballbns 2s linear infinite alternate;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, 100%);
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+@keyframes ballbns {
+  0% {
+    left: 0;
+    transform: translateX(0%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+@keyframes balancing {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+body {
+  margin: 0, 20;
+  background-color: azure;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    -45deg,
+    #b0ee520c,
+    #ee7752,
+    #bd779276,
+    rgba(82, 238, 116, 0.48),
+    #0c81ab,
+    #af8578,
+    #8258aa
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.letter-h {
+  color: rgb(0, 200, 255);
+}
+.letter-e {
+  color: yellowgreen;
+}
+.letter-l {
+  color: rgba(0, 128, 128, 0.867);
+}
+.letter-o {
+  color: rgba(255, 127, 80, 0.882);
+}
+.letter-x {
+  color: rgba(128, 128, 128, 0.775);
+}
+.title-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select-box {
+  display: flex;
+}
+
+.breed-select {
+  display: block;
+  width: 820px;
+  margin: 30, auto;
+  border-color: #ffd500;
+  border-radius: 4px;
+}
+.loader-item {
+  width: '500px';
+  height: 100px;
+  position: 'center-center';
+  font-size: '16px';
+}
+.img-card {
+  display: block;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin: 20px, auto;
+}
+.cat-box {
+  display: flex;
+
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  margin: 0px, auto;
+  padding-top: 50px;
+}
